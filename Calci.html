@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Calci{
+            background-color: #003e4d;
+            height: 470px;
+            width: 420px;
+            justify-items: center;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: 90px 90px 90px 90px;
+            column-gap: 7px;
+            row-gap: 10px;
+
+        }
+        .num{
+            background-color: #008387;
+            height: 55px;
+            width: 100%;
+            color:#acd1d2;
+            border: none;
+            font-weight: 600;
+            transition: opacity 0.15s;
+            
+        }
+        .op{
+            background-color: #4ba8a8;
+            height: 55px;
+            width: 100%;
+            color:#acd1d2;
+            border: none;
+            font-weight: bolder;
+            transition: opacity 0.15s;
+        }
+        .num:hover,.op:hover{
+            opacity: 90%;
+        }
+        .num:active,.op:active{
+            opacity: 70%;
+        }
+        
+        .display {
+        margin-top: 15px;
+        width: 380px; 
+        height: 80px;
+        background-color: white;
+        margin-bottom: 25px;
+
+        display: flex;            
+        justify-content: flex-end; 
+        align-items: center;       
+        }   
+
+        .disp-text{
+            font-size:35px;
+           margin-top:20px;
+            margin-bottom:0px;
+            
+        }
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="Calci">
+    <div>
+        <div class="display" >
+            <p class="disp-text">
+                0
+            </p>
+
+        </div>
+        
+    </div>
+    <div class="grid">
+        <div>
+            <button class="op" onclick="ac()">AC</button>
+            
+        </div>
+        <div>
+            <button class="op" onclick="del()">DEL</button>
+            
+        </div>
+        <div>
+            <button class="op" onclick="op_input('/')">/</button>
+            
+        </div>
+        <div>
+            <button class="op" onclick="op_input('*')">*</button>
+            
+        </div><div>
+            <button class="num" onclick="text_input('1')">1</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('2')">2</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('3')">3</button>
+            
+        </div>
+        <div>
+            <button class="op" onclick="op_input('+')">+</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('4')">4</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('5')">5</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('6')">6</button>
+            
+        </div>
+        
+
+        <div>
+            <button class="op" onclick="op_input('-')">-</button>
+            
+        </div>
+        <div>
+            <button class="num" onclick="text_input('7')">7</button>
+        </div>
+        <div>
+            <button class="num" onclick="text_input('8')">8</button>
+        </div>
+        <div>
+            <button class="num" onclick="text_input('9')">9</button>
+        </div>
+        <div>
+            <button class="op" onclick="op_input('^')">^</button>
+        </div>
+        <div>
+            <button class="num" onclick="text_input('0')">0</button>
+        </div>
+        <div>
+            <button class="num" onclick="text_input('00')">00</button>
+        </div>
+        <div>
+            <button class="num" onclick="text_input('.')">.</button>
+        </div>
+        <div>
+            <button class="op" onclick="ass_input('=')">=</button>
+        </div>
+        
+
+    </div>
+</div>
+
+
+
+<script src="Calculate.js"></script>
+    
+</body>
+</html>
