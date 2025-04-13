@@ -72,7 +72,7 @@ function ass_input(){
     if(text[pos]=='/' && num2!=0.0)
     ans=num1/num2;
     if(text[pos]=='/' && num2==0.0)
-    document.getElementsByClassName("disp-text")[0].innerHTML= "INVALID INPUT";
+    alert("INVALID INPUT");
     if(text[pos]=='^')
     ans= Math.pow(num1, num2);
     document.getElementsByClassName("disp-text")[0].innerHTML= ans;
